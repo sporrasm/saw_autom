@@ -1,0 +1,22 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# Relekortti
+#
+DEF Relekortti K 0 40 Y Y 1 F N
+F0 "K" 100 -600 50 H V C CNN
+F1 "Relekortti" 250 400 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S -250 350 250 -550 0 1 0 f
+X VDD 1 0 450 100 D 50 50 1 1 I
+X VSS 2 0 -650 100 U 50 50 1 1 I
+X CTRL 3 350 100 100 L 50 50 1 1 I
+X NC 4 350 -150 100 L 50 50 1 1 I
+X NO 5 350 -300 100 L 50 50 1 1 I
+X COM 6 -350 -250 100 R 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library

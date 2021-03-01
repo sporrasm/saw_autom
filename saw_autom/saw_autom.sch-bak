@@ -1,0 +1,846 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A1
+U 1 1 603540A6
+P 8900 2100
+F 0 "A1" H 8900 1011 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 8900 920 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 8900 2100 50  0001 C CIN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 8900 2100 50  0001 C CNN
+	1    8900 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 1750 1550 1750
+Text Label 750  1500 0    50   ~ 0
+12V
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 603570C9
+P 1550 1750
+F 0 "#FLG01" H 1550 1825 50  0001 C CNN
+F 1 "PWR_FLAG" H 1550 1923 50  0000 C CNN
+F 2 "" H 1550 1750 50  0001 C CNN
+F 3 "~" H 1550 1750 50  0001 C CNN
+	1    1550 1750
+	1    0    0    -1  
+$EndComp
+Connection ~ 1550 1750
+$Comp
+L power:GND #PWR01
+U 1 1 60357D17
+P 3200 2550
+F 0 "#PWR01" H 3200 2300 50  0001 C CNN
+F 1 "GND" H 3205 2377 50  0000 C CNN
+F 2 "" H 3200 2550 50  0001 C CNN
+F 3 "" H 3200 2550 50  0001 C CNN
+	1    3200 2550
+	1    0    0    -1  
+$EndComp
+Text Label 4800 1750 0    50   ~ 0
+7V
+Wire Wire Line
+	8900 3100 8900 3150
+Wire Wire Line
+	8900 3150 9000 3150
+Wire Wire Line
+	9000 3150 9000 3100
+Wire Wire Line
+	9000 3150 9300 3150
+Wire Wire Line
+	9300 3150 9300 3250
+Connection ~ 9000 3150
+$Comp
+L power:GND #PWR09
+U 1 1 60361F77
+P 9300 3250
+F 0 "#PWR09" H 9300 3000 50  0001 C CNN
+F 1 "GND" H 9305 3077 50  0000 C CNN
+F 2 "" H 9300 3250 50  0001 C CNN
+F 3 "" H 9300 3250 50  0001 C CNN
+	1    9300 3250
+	1    0    0    -1  
+$EndComp
+NoConn ~ 9400 1900
+NoConn ~ 9400 2100
+NoConn ~ 9400 2200
+NoConn ~ 9400 2300
+NoConn ~ 9400 2400
+NoConn ~ 9400 2500
+NoConn ~ 9400 2600
+NoConn ~ 9400 2700
+NoConn ~ 9400 2800
+Wire Wire Line
+	9100 1100 9100 1050
+Text Label 8850 650  0    50   ~ 0
+7V
+$Comp
+L Device:C C10
+U 1 1 60369123
+P 9450 800
+F 0 "C10" H 9565 846 50  0000 L CNN
+F 1 "100n" H 9565 755 50  0000 L CNN
+F 2 "" H 9488 650 50  0001 C CNN
+F 3 "~" H 9450 800 50  0001 C CNN
+	1    9450 800 
+	1    0    0    -1  
+$EndComp
+Connection ~ 9450 650 
+Wire Wire Line
+	9450 650  9850 650 
+$Comp
+L Device:C C11
+U 1 1 603695E6
+P 9850 800
+F 0 "C11" H 9965 846 50  0000 L CNN
+F 1 "100n" H 9965 755 50  0000 L CNN
+F 2 "" H 9888 650 50  0001 C CNN
+F 3 "~" H 9850 800 50  0001 C CNN
+	1    9850 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 1000 9450 950 
+Wire Wire Line
+	9450 1000 9650 1000
+Wire Wire Line
+	9850 1000 9850 950 
+Connection ~ 9650 1000
+Wire Wire Line
+	9650 1000 9850 1000
+Wire Wire Line
+	8100 2100 8400 2100
+Wire Wire Line
+	8400 2200 8100 2200
+Text Label 7450 1900 2    50   ~ 0
+RELE_SAHA
+Text Label 7800 2000 2    50   ~ 0
+RELE_HALKAISU
+$Comp
+L Switch:SW_SPST SW1
+U 1 1 6037CAF2
+P 1100 1750
+F 0 "SW1" H 1100 1985 50  0000 C CNN
+F 1 "SW_SPST" H 1100 1894 50  0000 C CNN
+F 2 "" H 1100 1750 50  0001 C CNN
+F 3 "~" H 1100 1750 50  0001 C CNN
+	1    1100 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_SPST SW2
+U 1 1 60383221
+P 6100 900
+F 0 "SW2" H 6100 1135 50  0000 C CNN
+F 1 "SW_SPST" H 6100 1044 50  0000 C CNN
+F 2 "" H 6100 900 50  0001 C CNN
+F 3 "~" H 6100 900 50  0001 C CNN
+	1    6100 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor_Magnetic:A1101LLHL U2
+U 1 1 6038CD43
+P 10050 4200
+F 0 "U2" H 9820 4246 50  0000 R CNN
+F 1 "ANTURI" H 9820 4155 50  0000 R CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 10050 3850 50  0001 L CIN
+F 3 "http://www.allegromicro.com/en/Products/Part_Numbers/1101/1101.pdf" H 10050 4850 50  0001 C CNN
+	1    10050 4200
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Sensor_Magnetic:A1101LLHL U3
+U 1 1 60393058
+P 10050 5700
+F 0 "U3" H 9820 5746 50  0000 R CNN
+F 1 "ANTURI" H 9820 5655 50  0000 R CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 10050 5350 50  0001 L CIN
+F 3 "http://www.allegromicro.com/en/Products/Part_Numbers/1101/1101.pdf" H 10050 6350 50  0001 C CNN
+	1    10050 5700
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	10150 5300 10150 5150
+Wire Wire Line
+	10150 5150 10350 5150
+Wire Wire Line
+	10150 3800 10150 3700
+Wire Wire Line
+	10150 3700 10400 3700
+Text Label 10400 3700 0    50   ~ 0
+7V
+Text Label 10350 5150 0    50   ~ 0
+7V
+$Comp
+L power:GND #PWR07
+U 1 1 60395905
+P 10150 4700
+F 0 "#PWR07" H 10150 4450 50  0001 C CNN
+F 1 "GND" H 10155 4527 50  0000 C CNN
+F 2 "" H 10150 4700 50  0001 C CNN
+F 3 "" H 10150 4700 50  0001 C CNN
+	1    10150 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 60395BF3
+P 10150 6200
+F 0 "#PWR08" H 10150 5950 50  0001 C CNN
+F 1 "GND" H 10155 6027 50  0000 C CNN
+F 2 "" H 10150 6200 50  0001 C CNN
+F 3 "" H 10150 6200 50  0001 C CNN
+	1    10150 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9750 5700 9400 5700
+Text Label 8300 5950 2    50   ~ 0
+ANTURI_HALKAISU
+$Comp
+L Device:R R5
+U 1 1 6039BDCE
+P 9300 4400
+F 0 "R5" H 9370 4446 50  0000 L CNN
+F 1 "2k" H 9370 4355 50  0000 L CNN
+F 2 "" V 9230 4400 50  0001 C CNN
+F 3 "~" H 9300 4400 50  0001 C CNN
+	1    9300 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 6039C516
+P 9600 4650
+F 0 "R8" V 9393 4650 50  0000 C CNN
+F 1 "5k" V 9484 4650 50  0000 C CNN
+F 2 "" V 9530 4650 50  0001 C CNN
+F 3 "~" H 9600 4650 50  0001 C CNN
+	1    9600 4650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10150 4700 10150 4650
+Wire Wire Line
+	10150 4650 9750 4650
+Connection ~ 10150 4650
+Wire Wire Line
+	10150 4650 10150 4600
+Wire Wire Line
+	9450 4650 9300 4650
+Wire Wire Line
+	9300 4650 9300 4550
+Wire Wire Line
+	9300 4250 9300 4200
+Wire Wire Line
+	9300 4200 9750 4200
+Wire Wire Line
+	9300 4650 9000 4650
+Connection ~ 9300 4650
+$Comp
+L Device:R R6
+U 1 1 603A9B21
+P 9400 5900
+F 0 "R6" H 9470 5946 50  0000 L CNN
+F 1 "2k" H 9470 5855 50  0000 L CNN
+F 2 "" V 9330 5900 50  0001 C CNN
+F 3 "~" H 9400 5900 50  0001 C CNN
+	1    9400 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 603A9F75
+P 9650 6150
+F 0 "R9" V 9443 6150 50  0000 C CNN
+F 1 "5k" V 9534 6150 50  0000 C CNN
+F 2 "" V 9580 6150 50  0001 C CNN
+F 3 "~" H 9650 6150 50  0001 C CNN
+	1    9650 6150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10150 6200 10150 6150
+Wire Wire Line
+	10150 6150 9800 6150
+Connection ~ 10150 6150
+Wire Wire Line
+	10150 6150 10150 6100
+Wire Wire Line
+	9500 6150 9400 6150
+Wire Wire Line
+	9400 6150 9400 6050
+Wire Wire Line
+	9400 5750 9400 5700
+Wire Wire Line
+	9000 4550 9000 4650
+Text Label 9000 4200 0    50   ~ 0
+5V
+$Comp
+L Device:D D1
+U 1 1 603BF7AA
+P 9000 4400
+F 0 "D1" V 8954 4480 50  0000 L CNN
+F 1 "D" V 9045 4480 50  0000 L CNN
+F 2 "" H 9000 4400 50  0001 C CNN
+F 3 "~" H 9000 4400 50  0001 C CNN
+	1    9000 4400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D D2
+U 1 1 603C59C9
+P 9000 5600
+F 0 "D2" V 8954 5680 50  0000 L CNN
+F 1 "D" V 9045 5680 50  0000 L CNN
+F 2 "" H 9000 5600 50  0001 C CNN
+F 3 "~" H 9000 5600 50  0001 C CNN
+	1    9000 5600
+	0    1    1    0   
+$EndComp
+Text Label 9000 5300 0    50   ~ 0
+5V
+Wire Wire Line
+	9000 5450 9000 5300
+Text Notes 6650 4250 0    79   ~ 0
+Anturirajapinta\n\n12 V -> 5 V jännitteenjaolla.\nDiodin V_f maksimissaan 0.5V, jotta\nulostulo ei ylitä Arduinon maksimia.
+Wire Wire Line
+	8800 5950 9000 5950
+$Comp
+L Device:R R2
+U 1 1 603E6662
+P 8650 5950
+F 0 "R2" V 8443 5950 50  0000 C CNN
+F 1 "R" V 8534 5950 50  0000 C CNN
+F 2 "" V 8580 5950 50  0001 C CNN
+F 3 "~" H 8650 5950 50  0001 C CNN
+	1    8650 5950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C8
+U 1 1 603E7241
+P 8500 6100
+F 0 "C8" H 8615 6146 50  0000 L CNN
+F 1 "C" H 8615 6055 50  0000 L CNN
+F 2 "" H 8538 5950 50  0001 C CNN
+F 3 "~" H 8500 6100 50  0001 C CNN
+	1    8500 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 603EF038
+P 8500 6250
+F 0 "#PWR04" H 8500 6000 50  0001 C CNN
+F 1 "GND" H 8505 6077 50  0000 C CNN
+F 2 "" H 8500 6250 50  0001 C CNN
+F 3 "" H 8500 6250 50  0001 C CNN
+	1    8500 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 5950 8300 5950
+Connection ~ 8500 5950
+Text Label 8300 4650 2    50   ~ 0
+ANTURI_SAHA
+$Comp
+L Device:R R1
+U 1 1 6040277D
+P 8650 4650
+F 0 "R1" V 8443 4650 50  0000 C CNN
+F 1 "R" V 8534 4650 50  0000 C CNN
+F 2 "" V 8580 4650 50  0001 C CNN
+F 3 "~" H 8650 4650 50  0001 C CNN
+	1    8650 4650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C7
+U 1 1 60402783
+P 8500 4800
+F 0 "C7" H 8615 4846 50  0000 L CNN
+F 1 "C" H 8615 4755 50  0000 L CNN
+F 2 "" H 8538 4650 50  0001 C CNN
+F 3 "~" H 8500 4800 50  0001 C CNN
+	1    8500 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 60402789
+P 8500 4950
+F 0 "#PWR03" H 8500 4700 50  0001 C CNN
+F 1 "GND" H 8505 4777 50  0000 C CNN
+F 2 "" H 8500 4950 50  0001 C CNN
+F 3 "" H 8500 4950 50  0001 C CNN
+	1    8500 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8500 4650 8300 4650
+Connection ~ 8500 4650
+Wire Wire Line
+	8800 4650 9000 4650
+Connection ~ 9000 4650
+Text Notes 6900 5800 0    79   ~ 0
+Nämä alipäästö-\nsuodattimet voivat\nolla hyödyksi,\njos anturi kohisee. 
+$Comp
+L saw_autom:Relekortti K2
+U 1 1 60468AA6
+P 3300 4500
+F 0 "K2" H 3300 5131 50  0000 C CNN
+F 1 "Relekortti" H 3300 5040 50  0000 C CNN
+F 2 "" H 3300 4500 50  0001 C CNN
+F 3 "" H 3300 4500 50  0001 C CNN
+	1    3300 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L saw_autom:Relekortti K1
+U 1 1 6046905D
+P 1700 4500
+F 0 "K1" H 1700 5131 50  0000 C CNN
+F 1 "Relekortti" H 1700 5040 50  0000 C CNN
+F 2 "" H 1700 4500 50  0001 C CNN
+F 3 "" H 1700 4500 50  0001 C CNN
+	1    1700 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 5150 1700 5250
+Wire Wire Line
+	1700 5250 2500 5250
+Wire Wire Line
+	3300 5250 3300 5150
+Wire Wire Line
+	1700 4050 1700 4000
+Wire Wire Line
+	3300 4000 3300 4050
+Wire Wire Line
+	2550 4000 2550 3900
+Wire Wire Line
+	1700 4000 2550 4000
+Connection ~ 2550 4000
+Wire Wire Line
+	2550 4000 3300 4000
+Text Label 2550 3900 0    50   ~ 0
+5V
+$Comp
+L power:GND #PWR02
+U 1 1 60482925
+P 2500 5250
+F 0 "#PWR02" H 2500 5000 50  0001 C CNN
+F 1 "GND" H 2505 5077 50  0000 C CNN
+F 2 "" H 2500 5250 50  0001 C CNN
+F 3 "" H 2500 5250 50  0001 C CNN
+	1    2500 5250
+	1    0    0    -1  
+$EndComp
+Connection ~ 2500 5250
+Wire Wire Line
+	2500 5250 3300 5250
+Wire Wire Line
+	2050 4400 2200 4400
+Wire Wire Line
+	3650 4400 3800 4400
+Text Label 3800 4400 0    50   ~ 0
+RELE_SAHA
+Text Label 2200 4400 0    50   ~ 0
+RELE_HALKAISU
+Text Label 8100 2100 2    50   ~ 0
+ANTURI_SAHA
+Text Label 8100 2200 2    50   ~ 0
+ANTURI_HALKAISU
+Wire Wire Line
+	1350 4750 1200 4750
+Wire Wire Line
+	2950 4750 2750 4750
+Wire Wire Line
+	2050 4800 2050 5400
+Wire Wire Line
+	1200 4750 1200 5400
+Wire Wire Line
+	2750 4750 2750 5400
+Wire Wire Line
+	3650 4800 3650 5400
+Text Label 3650 5400 3    50   ~ 0
+SAHA+
+Text Label 2750 5400 3    50   ~ 0
+SAHA-
+Text Label 2050 5400 3    50   ~ 0
+HALKAISU+
+Text Label 1200 5400 3    50   ~ 0
+HALKAISU-
+NoConn ~ 3650 4650
+NoConn ~ 2050 4650
+Wire Wire Line
+	7800 2000 7950 2000
+$Comp
+L Device:R R3
+U 1 1 604B0592
+P 7650 1700
+F 0 "R3" H 7720 1746 50  0000 L CNN
+F 1 "10k" H 7720 1655 50  0000 L CNN
+F 2 "" V 7580 1700 50  0001 C CNN
+F 3 "~" H 7650 1700 50  0001 C CNN
+	1    7650 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 604B0C64
+P 7950 1700
+F 0 "R7" H 8020 1746 50  0000 L CNN
+F 1 "10k" H 8020 1655 50  0000 L CNN
+F 2 "" V 7880 1700 50  0001 C CNN
+F 3 "~" H 7950 1700 50  0001 C CNN
+	1    7950 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 2000 7950 1850
+Wire Wire Line
+	7450 1900 7650 1900
+Connection ~ 7950 2000
+Wire Wire Line
+	7950 2000 8400 2000
+Wire Wire Line
+	7650 1850 7650 1900
+Connection ~ 7650 1900
+Wire Wire Line
+	7650 1900 8400 1900
+Wire Wire Line
+	7650 1550 7650 1450
+Wire Wire Line
+	7650 1450 7950 1450
+Wire Wire Line
+	7950 1450 7950 1550
+$Comp
+L power:GND #PWR05
+U 1 1 604BB16A
+P 7400 1500
+F 0 "#PWR05" H 7400 1250 50  0001 C CNN
+F 1 "GND" H 7405 1327 50  0000 C CNN
+F 2 "" H 7400 1500 50  0001 C CNN
+F 3 "" H 7400 1500 50  0001 C CNN
+	1    7400 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7400 1500 7400 1450
+Wire Wire Line
+	7400 1450 7650 1450
+Connection ~ 7650 1450
+NoConn ~ 9000 1100
+NoConn ~ 8400 1500
+NoConn ~ 8400 1600
+NoConn ~ 8400 2700
+NoConn ~ 8400 2800
+NoConn ~ 8400 2600
+NoConn ~ 8400 2500
+$Comp
+L Device:R R4
+U 1 1 604E36B7
+P 6350 1150
+F 0 "R4" H 6420 1196 50  0000 L CNN
+F 1 "10k" H 6420 1105 50  0000 L CNN
+F 2 "" V 6280 1150 50  0001 C CNN
+F 3 "~" H 6350 1150 50  0001 C CNN
+	1    6350 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 1000 6350 900 
+$Comp
+L power:GND #PWR06
+U 1 1 604E6902
+P 6350 1350
+F 0 "#PWR06" H 6350 1100 50  0001 C CNN
+F 1 "GND" H 6355 1177 50  0000 C CNN
+F 2 "" H 6350 1350 50  0001 C CNN
+F 3 "" H 6350 1350 50  0001 C CNN
+	1    6350 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 1350 6350 1300
+Wire Wire Line
+	9400 1600 9450 1600
+Wire Wire Line
+	9450 1600 9450 1500
+Wire Wire Line
+	9450 1500 9400 1500
+$Comp
+L Device:R R10
+U 1 1 604F07E9
+P 9500 1300
+F 0 "R10" H 9570 1346 50  0000 L CNN
+F 1 "10k" H 9570 1255 50  0000 L CNN
+F 2 "" V 9430 1300 50  0001 C CNN
+F 3 "~" H 9500 1300 50  0001 C CNN
+	1    9500 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 1500 9500 1500
+Wire Wire Line
+	9500 1500 9500 1450
+Connection ~ 9450 1500
+Wire Wire Line
+	9500 1150 9500 1050
+Wire Wire Line
+	9500 1050 9100 1050
+$Comp
+L Switch:SW_Push SW3
+U 1 1 604F7BE1
+P 9950 1600
+F 0 "SW3" H 9950 1885 50  0000 C CNN
+F 1 "SW_Push" H 9950 1794 50  0000 C CNN
+F 2 "" H 9950 1800 50  0001 C CNN
+F 3 "~" H 9950 1800 50  0001 C CNN
+	1    9950 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 1600 9750 1600
+Connection ~ 9450 1600
+$Comp
+L power:GND #PWR010
+U 1 1 6036B10C
+P 9650 1000
+F 0 "#PWR010" H 9650 750 50  0001 C CNN
+F 1 "GND" H 9655 827 50  0000 C CNN
+F 2 "" H 9650 1000 50  0001 C CNN
+F 3 "" H 9650 1000 50  0001 C CNN
+	1    9650 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10150 1600 10150 1750
+$Comp
+L power:GND #PWR011
+U 1 1 60505712
+P 10150 1750
+F 0 "#PWR011" H 10150 1500 50  0001 C CNN
+F 1 "GND" H 10155 1577 50  0000 C CNN
+F 2 "" H 10150 1750 50  0001 C CNN
+F 3 "" H 10150 1750 50  0001 C CNN
+	1    10150 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 900  6350 900 
+Connection ~ 6350 900 
+Wire Wire Line
+	5900 900  5750 900 
+Text Label 5750 900  2    50   ~ 0
+5V
+Text Notes 10100 1550 0    79   ~ 0
+Arduinon nollaus
+Wire Wire Line
+	900  1750 750  1750
+Wire Wire Line
+	750  1750 750  1500
+Wire Wire Line
+	9000 4250 9000 4200
+Text Notes 5550 1250 0    79   ~ 0
+Automaatio\npäälle/pois
+Text Notes 850  6450 0    79   ~ 0
+Nämä releiden ulostulot on vielä vähän kysymysmerkki.\nTarvitsisi mitata sieltä Deutz-liittimestä napojen välillä\nnäkyvä resistanssi kun jompikumpi napeista on painettu\npohjaan. Uskoisin, että se on pelkkä kytkin, mutta\nvarmistetaan mieluummin kuin kadutaan myöhemmin.
+$Comp
+L Regulator_Linear:LM337_TO220 U4
+U 1 1 603C0CDC
+P 3200 1750
+F 0 "U4" H 3200 1508 50  0000 C CNN
+F 1 "LM337_TO220" H 3200 1599 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 3200 1550 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/lm337-n.pdf" H 3200 1750 50  0001 C CNN
+	1    3200 1750
+	1    0    0    1   
+$EndComp
+Text Notes 2500 1000 0    50   ~ 0
+Vout = Vref (1+R12/R11) + R12 I_adj 
+Wire Wire Line
+	3500 1750 3650 1750
+$Comp
+L Device:R R11
+U 1 1 603E1A9E
+P 3650 1900
+F 0 "R11" H 3720 1946 50  0000 L CNN
+F 1 "240" H 3720 1855 50  0000 L CNN
+F 2 "" V 3580 1900 50  0001 C CNN
+F 3 "~" H 3650 1900 50  0001 C CNN
+	1    3650 1900
+	1    0    0    -1  
+$EndComp
+Connection ~ 3650 1750
+Wire Wire Line
+	3650 1750 3900 1750
+$Comp
+L Device:R R12
+U 1 1 603E2DFF
+P 3200 2300
+F 0 "R12" H 3270 2346 50  0000 L CNN
+F 1 "1k1" H 3270 2255 50  0000 L CNN
+F 2 "" V 3130 2300 50  0001 C CNN
+F 3 "~" H 3200 2300 50  0001 C CNN
+	1    3200 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 2150 3200 2100
+Wire Wire Line
+	3200 2100 3650 2100
+Wire Wire Line
+	3650 2100 3650 2050
+Connection ~ 3200 2100
+Wire Wire Line
+	3200 2100 3200 2050
+Wire Wire Line
+	3200 2450 3200 2500
+Text Notes 2500 1100 0    50   ~ 0
+Vout = 6.93V\n
+$Comp
+L Device:C C?
+U 1 1 603F6235
+P 4500 1950
+F 0 "C?" H 4615 1996 50  0000 L CNN
+F 1 "25u" H 4615 1905 50  0000 L CNN
+F 2 "" H 4538 1800 50  0001 C CNN
+F 3 "~" H 4500 1950 50  0001 C CNN
+	1    4500 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 603F65AF
+P 3650 2350
+F 0 "C?" H 3765 2396 50  0000 L CNN
+F 1 "10u" H 3765 2305 50  0000 L CNN
+F 2 "" H 3688 2200 50  0001 C CNN
+F 3 "~" H 3650 2350 50  0001 C CNN
+	1    3650 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 603F76D3
+P 2550 1950
+F 0 "C?" H 2665 1996 50  0000 L CNN
+F 1 "25u" H 2665 1905 50  0000 L CNN
+F 2 "" H 2588 1800 50  0001 C CNN
+F 3 "~" H 2550 1950 50  0001 C CNN
+	1    2550 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 1800 2550 1750
+Connection ~ 2550 1750
+Wire Wire Line
+	2550 1750 2750 1750
+Wire Wire Line
+	2550 2100 2550 2500
+Wire Wire Line
+	2550 2500 3200 2500
+Connection ~ 3200 2500
+Wire Wire Line
+	3200 2500 3200 2550
+Wire Wire Line
+	3650 2200 3650 2100
+Connection ~ 3650 2100
+Wire Wire Line
+	4500 1800 4500 1750
+Connection ~ 4500 1750
+Wire Wire Line
+	4500 1750 4800 1750
+Wire Wire Line
+	4500 2100 4500 2500
+Wire Wire Line
+	4500 2500 3650 2500
+Connection ~ 3650 2500
+$Comp
+L Device:D 1N4002
+U 1 1 6040C868
+P 3200 1350
+F 0 "1N4002" H 3200 1567 50  0000 C CNN
+F 1 "D" H 3200 1476 50  0000 C CNN
+F 2 "" H 3200 1350 50  0001 C CNN
+F 3 "~" H 3200 1350 50  0001 C CNN
+	1    3200 1350
+	1    0    0    -1  
+$EndComp
+Connection ~ 3900 1750
+$Comp
+L Device:D 1N4002
+U 1 1 60414F6A
+P 4000 1950
+F 0 "1N4002" V 3954 2030 50  0000 L CNN
+F 1 "D" V 4045 2030 50  0000 L CNN
+F 2 "" H 4000 1950 50  0001 C CNN
+F 3 "~" H 4000 1950 50  0001 C CNN
+	1    4000 1950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3650 2100 4000 2100
+Wire Wire Line
+	3200 2500 3650 2500
+Wire Wire Line
+	3900 1750 4000 1750
+Wire Wire Line
+	4000 1800 4000 1750
+Connection ~ 4000 1750
+Wire Wire Line
+	4000 1750 4500 1750
+Wire Wire Line
+	3350 1350 3900 1350
+Wire Wire Line
+	3900 1350 3900 1750
+Wire Wire Line
+	3050 1350 2750 1350
+Wire Wire Line
+	2750 1750 2750 1350
+Connection ~ 2750 1750
+Wire Wire Line
+	2750 1750 2900 1750
+Wire Wire Line
+	1550 1750 2550 1750
+Wire Wire Line
+	8800 1100 8800 650 
+Wire Wire Line
+	8800 650  9450 650 
+Wire Wire Line
+	9000 6150 9400 6150
+Connection ~ 9400 6150
+Connection ~ 9000 5950
+Wire Wire Line
+	9000 5950 9000 6150
+Wire Wire Line
+	9000 5750 9000 5950
+Text Label 9250 1050 0    50   ~ 0
+5V
+Wire Wire Line
+	8300 1650 8400 1650
+Wire Wire Line
+	8400 1650 8400 1700
+Wire Wire Line
+	8300 1650 8300 900 
+Wire Wire Line
+	6350 900  8300 900 
+$EndSCHEMATC
