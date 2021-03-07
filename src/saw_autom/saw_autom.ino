@@ -42,11 +42,11 @@ void loop() {
         if (looptime - lastBounce >= debounceTime) { // Perform action if button was pressed for 1s or more
             if (runLoop) { // Turn off automation & blinker
                 runLoop=false;
-                digitalWrite(blinker, 0);
+                digitalWrite(blinker, 1);
             }
             else { // Turn on automation and blinker
                 runLoop=true;
-                digitalWrite(blinker, 1);
+                digitalWrite(blinker, 0);
             }
         }
     }
