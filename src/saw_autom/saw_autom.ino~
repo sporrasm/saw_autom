@@ -40,7 +40,7 @@ bool runLoop=false;
 
 
 // Time (in milliseconds) to read button as pressed
-unsigned long debounceTime = 5000;
+unsigned long debounceTime = 3000;
 // Time (in milliseconds) to deactivate saw if sensor doesn't give signal
 unsigned long sawMaxTime = 5000;
 // Variables to measure the time passed (in milliseconds)
